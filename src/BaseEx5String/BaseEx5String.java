@@ -47,6 +47,17 @@ public class BaseEx5String {
 		System.out.println("New sentence : " + sentence.replaceAll(oldString, newString));
 		scan.close();
 	}
+	
+	public static boolean reverseString(String sentence) {
+		String reversedString = "";
+		// To check if a sentence is a palindrome, we have to lowercase the sentence and to delete the spaces
+		sentence = sentence.toLowerCase();
+		sentence = sentence.replaceAll(" ", "");
+		for(int i = 0; i < sentence.length(); i++) {
+			reversedString = sentence.charAt(i) + reversedString;
+		}
+		return sentence.equals(reversedString);
+	}
 
 	public static void main(String[] args) {
 		// Strings
@@ -75,10 +86,22 @@ public class BaseEx5String {
 		String completeThong = thong1 + thong2;
 		
 		if(searchString(thong1 + thong2, "teapot")){
-			replaceString(completeThong, "teapot");
+			//replaceString(completeThong, "teapot");
 		}
 		System.out.println("--------------------------------------");
 		System.out.println("--------------------------------------");
+		
+		System.out.println("--------------------------------------");
+		System.out.println("Palindrome Syndrome");
+		System.out.println("--------------------------------------");
+		
+		String palindrome = "Elu par cette crapule";
+		if(reverseString(palindrome)) {
+			System.out.println("The word '" + palindrome + "' is a palindrome.");
+		}else {
+			System.out.println("The word '" + palindrome + "' is not a palindrome.");
+			
+		}
 	}
 
 }
