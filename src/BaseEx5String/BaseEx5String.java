@@ -85,7 +85,7 @@ public class BaseEx5String {
 		// Replace word
 		String completeThong = thong1 + thong2;
 		
-		if(searchString(thong1 + thong2, "teapot")){
+		if(searchString(completeThong, "teapot")){
 			//replaceString(completeThong, "teapot");
 		}
 		System.out.println("--------------------------------------");
